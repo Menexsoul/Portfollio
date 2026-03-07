@@ -1,6 +1,6 @@
-'use client';
-import { useEffect, useState } from 'react';
-import { motion } from 'motion/react';
+"use client";
+import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 export default function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -9,9 +9,11 @@ export default function CustomCursor() {
 
   useEffect(() => {
     // Only show custom cursor on devices with a fine pointer (mouse)
-    if (window.matchMedia('(pointer: fine)').matches) {
-      setIsVisible(true);
-    }
+    const timer = setTimeout(() => {
+      if (window.matchMedia("(pointer: fine)").matches) {
+        setIsVisible(true);
+      }
+    }, 0);
 
     const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -20,13 +22,13 @@ export default function CustomCursor() {
     const handleMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (
-        window.getComputedStyle(target).cursor === 'pointer' ||
-        target.tagName.toLowerCase() === 'a' ||
-        target.tagName.toLowerCase() === 'button' ||
-        target.tagName.toLowerCase() === 'input' ||
-        target.tagName.toLowerCase() === 'textarea' ||
-        target.closest('a') ||
-        target.closest('button')
+        window.getComputedStyle(target).cursor === "pointer" ||
+        target.tagName.toLowerCase() === "a" ||
+        target.tagName.toLowerCase() === "button" ||
+        target.tagName.toLowerCase() === "input" ||
+        target.tagName.toLowerCase() === "textarea" ||
+        target.closest("a") ||
+        target.closest("button")
       ) {
         setIsHovering(true);
       } else {
@@ -34,12 +36,13 @@ export default function CustomCursor() {
       }
     };
 
-    window.addEventListener('mousemove', updateMousePosition);
-    window.addEventListener('mouseover', handleMouseOver);
+    window.addEventListener("mousemove", updateMousePosition);
+    window.addEventListener("mouseover", handleMouseOver);
 
     return () => {
-      window.removeEventListener('mousemove', updateMousePosition);
-      window.removeEventListener('mouseover', handleMouseOver);
+      clearTimeout(timer);
+      window.removeEventListener("mousemove", updateMousePosition);
+      window.removeEventListener("mouseover", handleMouseOver);
     };
   }, []);
 
@@ -52,9 +55,9 @@ export default function CustomCursor() {
         x: mousePosition.x - (isHovering ? 16 : 8),
         y: mousePosition.y - (isHovering ? 16 : 8),
         scale: isHovering ? 4 : 1,
-        borderRadius: isHovering ? '0%' : '50%',
+        borderRadius: isHovering ? "0%" : "50%",
       }}
-      transition={{ type: 'spring', stiffness: 500, damping: 28, mass: 0.5 }}
+      transition={{ type: "spring", stiffness: 500, damping: 28, mass: 0.5 }}
     />
   );
 }
