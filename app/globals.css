@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-dune-bg: #1A1918;
+  --color-dune-sand: #D4C5B9;
+  --color-dune-spice: #D95C14;
+  --color-dune-text: #F3F0EA;
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+@layer base {
+  @media (pointer: fine) {
+    body, a, button, input, textarea {
+      cursor: none;
+    }
+  }
+
+  /* Hide scrollbar for brutalist look */
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+}
