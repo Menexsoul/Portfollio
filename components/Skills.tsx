@@ -55,13 +55,17 @@ export default function Skills() {
               }}
             >
               <div className={`relative ${sizeClass} opacity-20 grayscale`}>
-                <Image
-                  src={skill.image}
-                  alt={skill.name}
-                  fill
-                  className="object-contain"
-                  referrerPolicy="no-referrer"
-                />
+                {/* @ts-ignore */}
+                {skill.image && (
+                  <Image
+                    // @ts-ignore
+                    src={skill.image}
+                    alt={skill.name}
+                    fill
+                    className="object-contain"
+                    referrerPolicy="no-referrer"
+                  />
+                )}
               </div>
             </motion.div>
           );
@@ -131,20 +135,28 @@ export default function Skills() {
               className="group flex flex-col items-center justify-center p-6 border border-dune-text/10 bg-dune-sand/5 hover:bg-dune-spice/10 hover:border-dune-spice/50 transition-colors duration-300"
             >
               <div className="relative w-12 h-12 mb-4 opacity-50 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500">
-                <Image
-                  src={skill.image}
-                  alt={skill.name}
-                  fill
-                  className="object-contain"
-                  referrerPolicy="no-referrer"
-                />
+                {/* @ts-ignore */}
+                {skill.image && (
+                  <Image
+                    // @ts-ignore
+                    src={skill.image}
+                    alt={skill.name}
+                    fill
+                    className="object-contain"
+                    referrerPolicy="no-referrer"
+                  />
+                )}
               </div>
               <h3 className="font-display text-sm font-bold uppercase tracking-widest text-dune-text text-center mb-1">
                 {skill.name}
               </h3>
-              <span className="font-body text-[10px] uppercase tracking-widest text-dune-sand/60">
-                {skill.level}
-              </span>
+              {/* @ts-ignore - Allow missing level property if user forgets it */}
+              {skill.level && (
+                <span className="font-body text-[10px] uppercase tracking-widest text-dune-sand/60">
+                  {/* @ts-ignore */}
+                  {skill.level}
+                </span>
+              )}
             </motion.div>
           ))}
         </div>
