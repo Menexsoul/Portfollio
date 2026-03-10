@@ -80,9 +80,9 @@ export const portfolioContent = {
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
       },
       {
-        name: "Next.js",
+        name: "GitHub",
         /* level: "Intermédiaire", */ image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
       },
       {
         name: "Symfony",
@@ -104,6 +104,11 @@ export const portfolioContent = {
         /* level: "Expert", */ image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
       },
+      {
+        name: "C#",
+        /* level: "Intermédiaire", */ image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+      }
     ],
   },
 
