@@ -75,9 +75,9 @@ export const portfolioContent = {
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
       },
       {
-        name: "SASS",
+        name: "Node.js",
         /* level: "Avancé", */ image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       },
       {
         name: "GitHub",
