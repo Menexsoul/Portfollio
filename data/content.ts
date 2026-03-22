@@ -53,7 +53,7 @@ export const portfolioContent = {
 
   skills: {
     sectionTitle: "L'Arsenal",
-    sectionSubtitle: "Secteur 04",
+    sectionSubtitle: "Secteur Compétences",
     description1:
       "Maîtrise des outils de création numérique. Chaque technologie est une arme affûtée pour sculpter l'information brute.",
     description2:
@@ -108,7 +108,7 @@ export const portfolioContent = {
         name: "C#",
         /* level: "Intermédiaire", */ image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
-      }
+      },
     ],
   },
 
@@ -130,4 +130,12 @@ export const portfolioContent = {
       location: "Etudiant en BTS SIO au Lycée Fulbert, Chartres",
     },
   },
+  socials: [
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/thomas-debroize-11061a363/",
+    },
+    { name: "GitHub", url: "https://github.com/Menexsoul" },
+    { name: "Email", url: "mailto:tho.deb.prof@gmail.com" },
+  ],
 };
