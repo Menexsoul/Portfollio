@@ -12,6 +12,9 @@
   "dependencies": {
     "@google/genai": "^1.17.0",
     "@hookform/resolvers": "^5.2.1",
+    "@types/caseless": "^0.12.5",
+    "@types/request": "^2.48.13",
+    "@types/tough-cookie": "^4.0.5",
     "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
