@@ -12,6 +12,42 @@ export const portfolioContent = {
       "https://www.fond-ecran-hd.net/Public/uploads/2023-05-25/dunepartie23840x2160film.jpg",
   },
 
+  about: {
+    sectionSubtitle: "L'IDENTITÉ",
+    title: "THOMAS\nDEBROIZE",
+    role: "DÉVELOPPEUR FULLSTACK",
+    image:
+      "https://plus.unsplash.com/premium_photo-1728882427558-ea1bef1ba75b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageLog: "IDENTITY_LOG_01",
+    imageLoc: "LOC: 44°24'26.4\"N 8°56'02.4\"E",
+    bio: {
+      title: "01 / BIO",
+      text: "Passionné par le cinéma et la musique, je suis un développeur junior qui essaie de trouver sa place dans le monde du développement web.",
+    },
+    philosophy: {
+      title: "02 / PHILOSOPHIE",
+      text: "Comprendre au mieux les besoins de l'utilisateur pour gagner au maximum la satisfaction de celui-ci.",
+    },
+    legacy: {
+      title: "03 / HÉRITAGE",
+      items: [
+        {
+          title: "FRONTEND_CORE",
+          desc: "Intégration architecturale de TypeScript, JavaScript et Next.js.",
+        },
+        {
+          title: "BACKEND_SPORE",
+          desc: "Infrastructure bio-organique sur Symfony et PHP.",
+        },
+        {
+          title: "DATA_VAULT",
+          desc: "Gestion de données avec MariaDB et SQLServer.",
+        },
+      ],
+    },
+    contactButton: "INITIER_LE_CONTACT",
+  },
+
   projects: {
     sectionTitle: "Mes\nProjets",
     sectionDescription:

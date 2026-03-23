@@ -58,7 +58,10 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-32 px-6 md:px-12 lg:px-24 bg-dune-sand text-dune-bg border-t border-dune-bg/20">
+    <section
+      id="contact"
+      className="py-32 px-6 md:px-12 lg:px-24 bg-dune-sand text-dune-bg border-t border-dune-bg/20"
+    >
       <div className="max-w-5xl mx-auto">
         <div className="mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 border-b-2 border-dune-bg/20 pb-8">
           <h2 className="font-display text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none whitespace-pre-line">
