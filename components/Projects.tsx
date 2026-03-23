@@ -1,8 +1,8 @@
-'use client';
-import { motion } from 'motion/react';
-import Image from 'next/image';
+"use client";
+import { motion } from "motion/react";
+import Image from "next/image";
 
-import { portfolioContent } from '@/data/content';
+import { portfolioContent } from "@/data/content";
 
 export default function Projects() {
   const { sectionTitle, sectionDescription, items } = portfolioContent.projects;
@@ -12,10 +12,14 @@ export default function Projects() {
       <div className="mb-32 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div>
           <h2 className="font-display text-5xl md:text-8xl font-black uppercase tracking-tighter text-dune-text leading-none whitespace-pre-line">
-            {sectionTitle.split('\n').map((line, i) => (
+            {sectionTitle.split("\n").map((line, i) => (
               <span key={i}>
-                {i === 1 ? <span className="text-dune-spice">{line}</span> : line}
-                {i === 0 && <br/>}
+                {i === 1 ? (
+                  <span className="text-dune-spice">{line}</span>
+                ) : (
+                  line
+                )}
+                {i === 0 && <br />}
               </span>
             ))}
           </h2>
@@ -27,7 +31,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 lg:gap-12">
         {items.map((project, index) => (
           <motion.a
             href={project.link}
@@ -35,20 +39,20 @@ export default function Projects() {
             initial={{ opacity: 0, y: 150 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ type: 'spring', stiffness: 60, damping: 15, delay: index * 0.1 }}
-            className={`group relative flex flex-col cursor-pointer ${
-              index === 0 ? 'md:col-span-8' : 
-              index === 1 ? 'md:col-span-4 mt-0 md:mt-48' : 
-              index === 2 ? 'md:col-span-5' : 
-              'md:col-span-7 mt-0 md:-mt-32'
-            }`}
+            transition={{
+              type: "spring",
+              stiffness: 60,
+              damping: 15,
+              delay: index * 0.1,
+            }}
+            className="group relative flex flex-col cursor-pointer"
           >
             <div className="relative w-full aspect-[4/3] overflow-hidden bg-dune-sand/10 border border-dune-text/20">
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-110"
+                className="object-contain p-4 grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
               {/* Brutalist overlay shadow */}
