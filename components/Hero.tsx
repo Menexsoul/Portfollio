@@ -72,11 +72,16 @@ export default function Hero() {
         }}
       />
 
+      {/* SEO Hidden H1 */}
+      <h1 className="sr-only">
+        Thomas Debroize - Portfolio Développeur Web Frontend & Fullstack
+      </h1>
+
       <motion.div
         style={{ y }}
         className="relative z-10 flex flex-col items-center"
       >
-        <motion.div
+        <motion.h2
           className="flex overflow-hidden"
           variants={container}
           initial="hidden"
@@ -91,7 +96,7 @@ export default function Hero() {
               {letter === " " ? "\u00A0" : letter}
             </motion.span>
           ))}
-        </motion.div>
+        </motion.h2>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

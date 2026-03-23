@@ -138,4 +138,28 @@ export const portfolioContent = {
     { name: "GitHub", url: "https://github.com/Menexsoul" },
     { name: "Email", url: "mailto:tho.deb.prof@gmail.com" },
   ],
+  seo: {
+    title: "Thomas Debroize | Portfolio Développeur Web",
+    description:
+      "Portfolio de Thomas Debroize, développeur web spécialisé en React, Next.js, Symfony et PHP. Découvrez mes projets et compétences.",
+    keywords: [
+      "Thomas Debroize",
+      "thomasdebroize",
+      "Portfolio Thomas Debroize",
+      "Développeur Web",
+      "React",
+      "Next.js",
+      "Symfony",
+      "PHP",
+      "Frontend",
+      "Fullstack",
+      "Dune",
+      "Brutalist Design",
+    ],
+    author: "Thomas Debroize",
+    url: "https://votre-portfolio.github.io", // À mettre à jour avec votre URL finale
+    ogImage:
+      "https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=1200&auto=format&fit=crop",
+    googleVerification: "VOTRE_CODE_DE_VERIFICATION_GOOGLE", // À obtenir sur Google Search Console
+  },
 };

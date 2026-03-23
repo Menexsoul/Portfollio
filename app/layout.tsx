@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css"; // Global styles
+
+import { portfolioContent } from "@/data/content";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -15,13 +16,42 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://thomasdebroize.com"),
-
-  title: "Thomas Debroize | Portfolio",
-  description: "Portfolio de Thomas Debroize, développeur Full-Stack.",
-
-  // 2. Définir la balise canonique dynamique
-  alternates: {
-    canonical: "/",
+  title: {
+    default: "Thomas Debroize | Portfolio",
+    template: `%s | ${portfolioContent.seo.title}`,
+  },
+  description: "Portfolio de Thomas Debroize, développeur Fullstack",
+  keywords: portfolioContent.seo.keywords,
+  authors: [{ name: portfolioContent.seo.author }],
+  creator: portfolioContent.seo.author,
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: portfolioContent.seo.url,
+    title: portfolioContent.seo.title,
+    description: portfolioContent.seo.description,
+    siteName: portfolioContent.seo.title,
+    images: [
+      {
+        url: portfolioContent.seo.ogImage,
+        width: 1200,
+        height: 630,
+        alt: portfolioContent.seo.title,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: portfolioContent.seo.title,
+    description: portfolioContent.seo.description,
+    images: [portfolioContent.seo.ogImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  verification: {
+    google: portfolioContent.seo.googleVerification,
   },
 };
 
@@ -31,15 +61,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
+    <html lang="fr" className={`${spaceGrotesk.variable} ${inter.variable}`}>
       <head>
         {/* Google Analytics */}
-        <Script
+        <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-WJ7N99VSK0"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-WJ7N99VSK0`} // Remplacez par votre ID de suivi Google Analytics
         />
-        <Script
-          id="google-analytics"
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
