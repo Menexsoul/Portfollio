@@ -9,7 +9,7 @@ export const portfolioContent = {
     subtitle: "Devellopeur Fullstack",
     // Image de fond (parallaxe)
     backgroundImage:
-      "https://www.fond-ecran-hd.net/Public/uploads/2023-05-25/dunepartie23840x2160film.jpg",
+      "https://image.tmdb.org/t/p/original/lKZmKiSSFgYFM68Bztenl49BwGf.jpg",
   },
 
   about: {
