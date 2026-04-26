@@ -16,8 +16,7 @@ export const portfolioContent = {
     sectionSubtitle: "L'IDENTITÉ",
     title: "THOMAS\nDEBROIZE",
     role: "DÉVELOPPEUR FULLSTACK",
-    image:
-      "https://plus.unsplash.com/premium_photo-1728882427558-ea1bef1ba75b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/profil.jpg",
     imageLog: "IDENTITY_LOG_01",
     imageLoc: "LOC: 44°24'26.4\"N 8°56'02.4\"E",
     bio: {
