@@ -6,7 +6,7 @@ export const portfolioContent = {
     // Le grand titre principal (lettre par lettre)
     title: "Thomas",
     // Le sous-titre sous le grand titre
-    subtitle: "Devellopeur Fullstack",
+    subtitle: "Développeur Fullstack",
     // Image de fond (parallaxe)
     backgroundImage:
       "https://image.tmdb.org/t/p/original/lKZmKiSSFgYFM68Bztenl49BwGf.jpg",
@@ -25,7 +25,7 @@ export const portfolioContent = {
     },
     philosophy: {
       title: "02 / PHILOSOPHIE",
-      text: "Comprendre au mieux les besoins de l'utilisateur pour gagner au maximum la satisfaction de celui-ci.",
+      text: "Comprendre au mieux les besoins de l'utilisateur pour lui donner une totale satisfaction.",
     },
     legacy: {
       title: "03 / HÉRITAGE",
